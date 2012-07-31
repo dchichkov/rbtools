@@ -3,7 +3,6 @@ import sys
 
 from rbtools.utils.process import die
 
-
 # The clients are lazy loaded via load_scmclients()
 SCMCLIENTS = None
 
@@ -129,6 +128,7 @@ def load_scmclients(options):
     from rbtools.clients.perforce import PerforceClient
     from rbtools.clients.plastic import PlasticClient
     from rbtools.clients.svn import SVNClient
+    from rbtools.clients.bazaar import BazaarClient
 
     SCMCLIENTS = [
         CVSClient(options=options),
@@ -138,6 +138,7 @@ def load_scmclients(options):
         PerforceClient(options=options),
         PlasticClient(options=options),
         SVNClient(options=options),
+        BazaarClient(options=options),
     ]
 
 
