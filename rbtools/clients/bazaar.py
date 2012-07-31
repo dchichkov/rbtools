@@ -120,7 +120,7 @@ class BazaarClient(SCMClient):
         Return the diff for the two revisions in ``revision_range``.
 
         """
-        diff_cmd = ["bzr", "dif", "-q", "-r", revision_range]
+        diff_cmd = ["bzr", "dif", "-q"]#, "-r", revision_range]
         print diff_cmd + files
         diff = execute(
             diff_cmd + files,
